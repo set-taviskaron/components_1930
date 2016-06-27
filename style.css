@@ -4,12 +4,23 @@ body {
 }
 
 .block {
+	position: absolute;
+
+	top: 40px;
+	left: 40px;
+
 	width: 100px;
 	height: 100px;
 	display: inline-block;
 	margin: 10px;
 	user-select: none;
 	font-size: 20px;
+}
+
+.block_outer {
+	position: relative;
+	width: 200px;
+	height: 200px;
 }
 
 .block_red {

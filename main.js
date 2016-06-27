@@ -5,25 +5,25 @@
 
 	let outerLet = 'HELLO!'
 
-	function blockOnClick () {
+	function blockOnClick (event) {
 		let color = this.style.background;
+		console.log('Клик по: ', event.target);
+		console.log('Клик зарегистрирован на : ', event.currentTarget);
 
-		if (color === 'yellow') {
-			color = 'red';
-		} else {
-			color = 'yellow';
+		if (event.target === blockInner) {
+			// event.stopPropagation();
 		}
-
-		this.style.background = color;
-		this.innerHTML = parseInt(this.innerHTML, 10) + 1;
 	}
 
-	let blockRed = document.querySelector('.block_red');
-	let blockGreen = document.querySelector('.block_green');
-	let blockBlue = document.querySelector('.block_blue');
+	let blockOuter = document.querySelector('.block_outer');
+	let blockInner = document.querySelector('.block_inner');
+	
 
-	blockRed.onclick = blockOnClick;
-	blockGreen.onclick = blockOnClick;
-	blockBlue.onclick = blockOnClick;
+	blockOuter.addEventListener('click', blockOnClick, true);
+	blockInner.addEventListener('click', blockOnClick, true);
 
+
+	document.body.addEventListener('click', function () {
+		console.log('Я всплыл до BODY')
+	}, true);
 })(window);
