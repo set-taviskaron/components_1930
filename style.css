@@ -1,0 +1,25 @@
+body {
+	background-color: #ececec;
+	-webkit-user-select: none;
+}
+
+.block {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin: 10px;
+	user-select: none;
+	font-size: 20px;
+}
+
+.block_red {
+	background-color: red;
+}
+
+.block_blue {
+	background-color: blue;
+}
+
+.block_green {
+	background-color: green;
+}
