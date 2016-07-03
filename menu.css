@@ -35,13 +35,13 @@ body, html {
 .menu__item:hover {
     background-color: #cccccc;
 }
+.menu__item_active,
+.menu__item_active:hover {
+    background-color: #555 !important;
+    color: #fff;
+}
 .menu__item-delete {
     position: absolute;
     right: 10px;
     font-size: 20px;
-    /*height: 30px;*/
-   /* display: block;*/
-    /*background: none;
-    border: none;
-    padding: 0;*/
 }
