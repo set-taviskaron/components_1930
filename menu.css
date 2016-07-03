@@ -32,12 +32,12 @@ body, html {
 .menu__item:nth-child(even) {
     background-color: #dcdcdc;
 }
-.menu__item:hover {
+.menu__item.menu__item-hover {
     background-color: #cccccc;
 }
-.menu__item_active,
-.menu__item_active:hover {
-    background-color: #555 !important;
+.menu__item.menu__item_active/*,
+.menu__item_active:hover*/ {
+    background-color: #555;
     color: #fff;
 }
 .menu__item-delete {

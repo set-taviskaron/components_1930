@@ -1,3 +1,4 @@
+'use strict';
 class Menu {
 	constructor(options) {
 		this.el = options.el;
@@ -8,8 +9,22 @@ class Menu {
 
 	_initEvents() {
 		this.el.addEventListener('click', this._onMenuClick.bind(this));
+		this.el.addEventListener('mouseover', this._onMenuItemHover.bind(this));
+		this.el.addEventListener('mouseout', this._onMenuItemHover.bind(this));
 	}
 
+	_onMenuItemHover(event) {
+		if (event.target.classList.contains('menu__item')) {
+
+			if (event.type == 'mouseover') {
+				event.target.classList.add('menu__item-hover');
+			}
+			if (event.type == 'mouseout') {
+				event.target.classList.remove('menu__item-hover');
+			}
+
+		}
+	};
 
 	_onMenuClick(event) {
 		if (event.target.classList.contains('menu__title')) {
