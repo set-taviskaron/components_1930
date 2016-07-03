@@ -36,7 +36,7 @@ class Menu {
 		}
 		if (event.target.classList.contains('menu__item-delete')) {
 			this._onMenuItemDelete(event);
-		}
+		} 
 
 	}
 
